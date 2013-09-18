@@ -1,7 +1,5 @@
 # This file is part of Tryton.  The COPYRIGHT file at the top level of
 # this repository contains the full copyright notices and license terms.
-from ast import literal_eval
-
 import pytz
 from werkzeug import abort, redirect
 from wtforms import Form, TextField, PasswordField, validators
@@ -11,7 +9,6 @@ from nereid.globals import session, request
 from nereid.helpers import login_required, key_from_list, get_flashed_messages
 from nereid.signals import login, failed_login, logout
 from trytond.model import ModelView, ModelSQL, fields
-from trytond.backend import TableHandler
 from trytond.transaction import Transaction
 from trytond.pool import Pool
 
